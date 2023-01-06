@@ -161,4 +161,128 @@
       transform: rotateY(3600deg);
     }
   }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 520px) {
+    .meal-heading {
+      display: none;
+    }
+    nav h1 {
+      font-size: 25px;
+    }
+    .card-box {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0;
+    }
+    .card-box span img {
+      width: 340px;
+      height: 200px;
+    }
+    .card-box span {
+      height: auto;
+      margin: 20px;
+      width: 343px;
+    }
+    .input2,
+    .input1 {
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 0;
+      justify-content: center;
+    }
+    .input1,
+    .input2 {
+      width: fit-content;
+    }
   
+    input {
+      width: 340px;
+      height: 50px;
+      margin: 10px 10px 8px 20px;
+    }
+    .dish {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0 0;
+    }
+    .recipe {
+      margin: 0;
+      padding: 0;
+    }
+    .steps {
+      margin: 0 70px;
+    }
+    .ingrediants,
+    .equipment {
+      margin: 20px;
+      width: 340px;
+    }
+    .steps {
+      margin: 20px;
+    }
+    select {
+      height: 50px;
+      margin: 10px 10px 8px 20px;
+      width: 340px;
+      text-align: center;
+    }
+  }
+  
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 521px) and (max-width: 820px) {
+    .card-box {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card-box span img {
+      width: 270px;
+      height: 200px;
+    }
+    .card-box span {
+      height: auto;
+      margin: 20px;
+      width: 273px;
+    }
+    .card-box,
+    .meal-heading {
+      margin: 5px;
+    }
+  
+    .dish {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 0;
+    }
+    .dish li {
+      margin: 5px;
+    }
+    .recipe {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .steps {
+      margin: 0 70px;
+    }
+    .ingrediants,
+    .equipment {
+      margin: 30px;
+      width: 250px;
+    }
+    .steps {
+      margin: 30px;
+    }
+    select {
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 821px) and (max-width: 1120px) {
+    .card-box span img {
+      width: 270px;
+      height: 200px;
+    }
+    .card-box span {
+      height: auto;
+      margin: 20px;
+      width: 273px;
+    }
+  }
+    
