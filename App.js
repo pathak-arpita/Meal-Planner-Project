@@ -13,15 +13,18 @@ const card = document.querySelector(".card-box");
 const ingrediants =  document.querySelector(".ingrediants");
 const equipment = document.querySelector(".equipment");
 const steps = document.querySelector(".steps");
-const tbody = document.querySelector("tbody") ///
+const tbody = document.querySelector("tbody") 
 const load = document.querySelector("#load");
+const background = document.querySelector(".background");
+const recipebackground = document.querySelector(".recipe");
+
 // api Key 
 const apiKey =  "6d9547fa048e42759cdedfee1d0bedda";
 const apiKey1 = "28a27230c01e46d8ac7113711190781b";
 const apiKey2 = "4c30305842244bdc959fe01d7ba4daf1";
 const apiKey3 = "2530ebb758e9458b97b8ea62b2f8a259";
 const apiKey5 = "58b70ad75cfd44faaf2caaee62677046";
-const apiKey6 = "3d93ff6153e94458815b41f23462d782";
+const apiKey6 = "4351c5d4070344ccbde7eda659f6134c";
 
 
 async function mealColories() {
@@ -76,6 +79,9 @@ generateMealBtn.addEventListener('click', generateMeal);
 
 // Generate Html Function
 function generateHTML(results) {
+    background.style.display = "none";
+    recipebackground.style.display = "none";
+
     const item = document.createElement("span");
     const img = document.createElement("img");
     const title = document.createElement("h3")
@@ -83,6 +89,9 @@ function generateHTML(results) {
     item.setAttribute("class","grid");
 
     function getRecipeData(){
+        background.style.display = "block";
+        recipebackground.style.display = "block";
+
         ingrediants.innerHTML = " ";
         ingrediants.innerHTML = `<h2>Ingredients</h2>`;
         let apiIngre = results.extendedIngredients;
@@ -122,7 +131,11 @@ function generateHTML(results) {
     }   
     }
     getRecipeBtn.setAttribute("class" , "get-btn");
-    card.addEventListener("click", getRecipeData);
+    getRecipeBtn.addEventListener("click", getRecipeData);
+    // getRecipeBtn.addEventListener('click', function () {
+    //     document.item.style.backgroundImage = "url(pexels-photo-349610.jpeg)";
+    //     // document.body.style.transition = "2s";
+    // });
     img.setAttribute("src", results.image);
     title.innerHTML = results.title;
     getRecipeBtn.innerHTML = "Get Receipe";
@@ -130,14 +143,14 @@ function generateHTML(results) {
     item.appendChild(title);
     item.appendChild(getRecipeBtn);
     card.appendChild(item);
-     let anchorTag = document.createElement("a");
-    let link = document.createTextNode("Get Recipi");
-    let anchorDiv =  document.createElement("div"); 
-    anchorDiv.classList = "getrecipe";
-    anchorDiv.appendChild(anchorTag);
-    anchorTag.appendChild(link);
-    anchorTag.setAttribute("href" , results.spoonacularSourceUrl);
-    anchorTag.setAttribute("target" , "_blank");
+    //  let anchorTag = document.createElement("a");
+    // let link = document.createTextNode("Get Recipi");
+    // let anchorDiv =  document.createElement("div"); 
+    // anchorDiv.classList = "getrecipe";
+    // anchorDiv.appendChild(anchorTag);
+    // anchorTag.appendChild(link);
+    // anchorTag.setAttribute("href" , results.spoonacularSourceUrl);
+    // anchorTag.setAttribute("target" , "_blank");
 }
 
 // Initial Meal Data 
