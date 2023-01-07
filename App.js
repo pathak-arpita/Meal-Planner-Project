@@ -21,8 +21,8 @@ const formData = document.querySelector(".formData");
 
 // api Key 
 const apiKey1 =  "6d9547fa048e42759cdedfee1d0bedda";
-const apiKey6 = "a02399d93f914654a7bec3bc12eba59f";
-const apiKey2 = "4c30305842244bdc959fe01d7ba4daf1";
+const apiKey2 = "a02399d93f914654a7bec3bc12eba59f";
+const apiKey6 = "4c30305842244bdc959fe01d7ba4daf1";
 const apiKey3 = "2530ebb758e9458b97b8ea62b2f8a259";
 const apiKey5 = "58b70ad75cfd44faaf2caaee62677046";
 const apiKey = "7a4a6efeb7d34eeda9b5152e3ddcce57";
