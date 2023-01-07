@@ -198,6 +198,9 @@
   
 /* Media Query for Mobile Devices */
 @media (max-width: 520px) {
+  *{
+    background-repeat: repeat-y;
+  }
     .meal-heading {
       display: none;
     }
