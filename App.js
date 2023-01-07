@@ -17,14 +17,15 @@ const tbody = document.querySelector("tbody")
 const load = document.querySelector("#load");
 const background = document.querySelector(".background");
 const recipebackground = document.querySelector(".recipe");
+const formData = document.querySelector(".formData");
 
 // api Key 
-const apiKey =  "6d9547fa048e42759cdedfee1d0bedda";
-const apiKey1 = "28a27230c01e46d8ac7113711190781b";
+const apiKey1 =  "6d9547fa048e42759cdedfee1d0bedda";
+const apiKey6 = "a02399d93f914654a7bec3bc12eba59f";
 const apiKey2 = "4c30305842244bdc959fe01d7ba4daf1";
 const apiKey3 = "2530ebb758e9458b97b8ea62b2f8a259";
 const apiKey5 = "58b70ad75cfd44faaf2caaee62677046";
-const apiKey6 = "7a4a6efeb7d34eeda9b5152e3ddcce57";
+const apiKey = "7a4a6efeb7d34eeda9b5152e3ddcce57";
 
 
 async function mealColories() {
@@ -54,6 +55,11 @@ async function mealColories() {
     return respData;
 }
 
+async function newFunction(){
+    var element = document.getElementById("formData");
+     element.reset()
+  }
+
 async function mealData (data){
     card.innerHTML = " ";
     ingrediants.innerHTML = " ";
@@ -72,7 +78,8 @@ async function mealData (data){
 }
 async function generateMeal(){
     const data =await mealColories()
-    await mealData(data.meals);
+    await mealData(data.meals); 
+    newFunction();
 }
 generateMealBtn.addEventListener('click', generateMeal);
 
@@ -132,10 +139,6 @@ function generateHTML(results) {
     }
     getRecipeBtn.setAttribute("class" , "get-btn");
     getRecipeBtn.addEventListener("click", getRecipeData);
-    // getRecipeBtn.addEventListener('click', function () {
-    //     document.item.style.backgroundImage = "url(pexels-photo-349610.jpeg)";
-    //     // document.body.style.transition = "2s";
-    // });
     img.setAttribute("src", results.image);
     title.innerHTML = results.title;
     getRecipeBtn.innerHTML = "Get Receipe";
@@ -143,14 +146,6 @@ function generateHTML(results) {
     item.appendChild(title);
     item.appendChild(getRecipeBtn);
     card.appendChild(item);
-    //  let anchorTag = document.createElement("a");
-    // let link = document.createTextNode("Get Recipi");
-    // let anchorDiv =  document.createElement("div"); 
-    // anchorDiv.classList = "getrecipe";
-    // anchorDiv.appendChild(anchorTag);
-    // anchorTag.appendChild(link);
-    // anchorTag.setAttribute("href" , results.spoonacularSourceUrl);
-    // anchorTag.setAttribute("target" , "_blank");
 }
 
 // Initial Meal Data 
