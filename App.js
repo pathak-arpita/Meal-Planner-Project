@@ -24,7 +24,7 @@ const apiKey1 = "28a27230c01e46d8ac7113711190781b";
 const apiKey2 = "4c30305842244bdc959fe01d7ba4daf1";
 const apiKey3 = "2530ebb758e9458b97b8ea62b2f8a259";
 const apiKey5 = "58b70ad75cfd44faaf2caaee62677046";
-const apiKey6 = "4351c5d4070344ccbde7eda659f6134c";
+const apiKey6 = "7a4a6efeb7d34eeda9b5152e3ddcce57";
 
 
 async function mealColories() {
