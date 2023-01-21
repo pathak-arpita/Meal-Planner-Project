@@ -17,7 +17,7 @@ const tbody = document.querySelector("tbody")
 const load = document.querySelector("#load");
 const background = document.querySelector(".background");
 const recipebackground = document.querySelector(".recipe");
-const formData = document.querySelector(".formData");
+// const formData = document.querySelector(".formData");
 
 // api Key 
 const apiKey1 =  "6d9547fa048e42759cdedfee1d0bedda";
@@ -55,7 +55,7 @@ async function mealColories() {
     return respData;
 }
 
-async function newFunction(){
+async function blankData(){
     var element = document.getElementById("formData");
      element.reset()
   }
@@ -79,7 +79,7 @@ async function mealData (data){
 async function generateMeal(){
     const data =await mealColories()
     await mealData(data.meals); 
-    newFunction();
+    blankData();
 }
 generateMealBtn.addEventListener('click', generateMeal);
 
