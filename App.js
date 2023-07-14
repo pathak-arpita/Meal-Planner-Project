@@ -30,16 +30,16 @@ const apiKey5 = "58b70ad75cfd44faaf2caaee62677046";
 
 
 async function mealColories() {
-    if (age.value >100){
+    if ((age.value >100  || weight.value > 1000) ){
         toast.classList.add('toast');
-        toast.innerHTML = '<i class="fa-solid fa-circle-xmark"> </i>Please Ente valid Inputs';
+        toast.innerHTML = '<i class="fa-solid fa-circle-xmark"> </i>Please Enter valid Inputs';
         toastBox.appendChild(toast);
 
         setTimeout(()=>{
            toast.remove();
         } , 5000)
 
-        blankData();
+         blankData();
     }
 
     let bmrMale = 66.47 + (13.75 * weight.value) + (5.003 * height.value) - (6.755 * age.value);
