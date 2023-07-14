@@ -17,7 +17,7 @@ const tbody = document.querySelector("tbody")
 const load = document.querySelector("#load");
 const background = document.querySelector(".background");
 const recipebackground = document.querySelector(".recipe");
-// const formData = document.querySelector(".formData");
+ const formData = document.querySelector(".formData");
 
 // api Key 
 const apiKey1 =  "6d9547fa048e42759cdedfee1d0bedda";
@@ -29,6 +29,9 @@ const apiKey6 = "7a4a6efeb7d34eeda9b5152e3ddcce57";
 
 
 async function mealColories() {
+    if (age.value >100){
+        toastr.success('This is a notification!', 'Custom Alert');
+    }
     let bmrMale = 66.47 + (13.75 * weight.value) + (5.003 * height.value) - (6.755 * age.value);
     let bmrFemale = 655.1 + (9.563 * weight.value) + (1.850 * height.value) - (4.676 * age.value);
     if (gender.value === "male" && activity.value === "light") {
